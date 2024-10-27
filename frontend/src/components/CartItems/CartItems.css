@@ -1,0 +1,368 @@
+/* Main cart container styling */
+.cartitems {
+    margin: 80px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Divider styling */
+.cartitems hr {
+    height: 2px;
+    background: #e0e0e0;
+    border: none;
+    margin: 10px 0;
+}
+
+/* Grid layout for cart headers */
+.cartitem-format-main {
+    display: grid;
+    grid-template-columns: 0.6fr 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Cart item rows */
+.cartItems-format {
+    display: grid;
+    grid-template-columns: 0.6fr 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 0;
+    transition: background-color 0.2s ease;
+}
+
+.cartItems-format:hover {
+    background-color: #fafafa;
+}
+
+/* Product image styling */
+.carticon-product-icon {
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Quantity button styling */
+.cartItems-quantity {
+    width: 50px;
+    height: 45px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 45px;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.cartItems-quantity:hover {
+    border-color: #aaa;
+}
+
+/* Price and total styling */
+.cartitem-format-main p,
+.cartItems-format p {
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Remove icon styling */
+.remove-icon {
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.remove-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.cartitem-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cartitems-totals,
+.cartitems-promocode {
+    width: 60%;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cartitems-totals h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.cartitems-total-item h3,
+.cartitems-total-item p {
+    font-weight: bold;
+}
+
+.cartitems-totals hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+.cartitems-totals button {
+    background-color: #ff4141;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.cartitems-totals button:hover {
+    background-color: #e02e2e;
+}
+
+.cartitems-promocode {
+    width: 35%;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cartitems-promocode p {
+    margin-bottom: 1rem;
+    color: #777;
+}
+
+.cartitems-promobox {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cartitems-promobox input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.cartitems-promobox button {
+    background-color: #ff4141;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cartitems-promobox button:hover {
+    background-color: #e02e2e;
+}
+
+@media (max-width: 1280px) {
+    .cartitems {
+      padding: 15px;
+    }
+    .cartitem-format-main,
+    .cartItems-format {
+      grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr;
+      gap: 15px;
+      font-size: 14px; /* Reduced text size */
+      transition: all 0.3s ease-in-out;
+    }
+    .cartitems-totals, .cartitems-promocode {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .cartitems-totals:hover, .cartitems-promocode:hover {
+      transform: scale(1.02);
+    }
+    .cartitems-totals h1 {
+      font-size: 1.4rem; /* Smaller heading */
+    }
+    .cartitems-totals p, .cartitems-totals h3, .cartitems-promocode p {
+      font-size: 0.9rem; /* Smaller text size */
+    }
+    .cartitems-totals button, .cartitems-promobox button {
+      font-size: 0.85rem; /* Smaller button text */
+    }
+    .cartitems-promobox input {
+      font-size: 0.85rem; /* Smaller input text */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .cartitems {
+      padding: 10px;
+    }
+    .cartitem-format-main,
+    .cartItems-format {
+      grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr;
+      font-size: 13px; /* Reduced text size */
+    }
+    .cartitems-totals, .cartitems-promocode {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .cartitems-totals:hover, .cartitems-promocode:hover {
+      transform: scale(1.02);
+    }
+    .cartitems-totals h1 {
+      font-size: 1.3rem; /* Smaller heading */
+    }
+    .cartitems-totals p, .cartitems-totals h3, .cartitems-promocode p {
+      font-size: 0.85rem; /* Smaller text size */
+    }
+    .cartitems-totals button, .cartitems-promobox button {
+      font-size: 0.85rem; /* Smaller button text */
+    }
+    .cartitems-promobox input {
+      font-size: 0.85rem; /* Smaller input text */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cartitems {
+      padding: 20px;
+      background-color: #fafafa;
+      border-radius: 8px;
+    }
+    .cartitem-format-main,
+    .cartItems-format {
+      grid-template-columns: 0.7fr 1.8fr 1fr;
+      font-size: 12px; /* Further reduced text size */
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .cartitems-totals, .cartitems-promocode {
+      width: 100%;
+      margin-top: 20px;
+      padding: 20px;
+    }
+    .cartitems-totals button, .cartitems-promobox button {
+      font-size: 0.8rem; /* Smaller button text */
+      padding: 0.7rem 1.1rem;
+      transition: background-color 0.3s ease-in-out;
+    }
+    .cartitems-totals button:hover, .cartitems-promobox button:hover {
+      background-color: #388E3C;
+    }
+    .cartitems-totals h1 {
+      font-size: 1.2rem; /* Smaller heading */
+    }
+    .cartitems-totals p, .cartitems-totals h3, .cartitems-promocode p {
+      font-size: 0.8rem; /* Smaller text size */
+    }
+    .cartitems-promobox input {
+      font-size: 0.8rem; /* Smaller input text */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .cartitems {
+      margin: 20px auto;
+      padding: 10px;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      border-radius: 10px;
+    }
+    .cartitem-format-main,
+    .cartItems-format {
+      grid-template-columns: 1fr 1.5fr;
+      font-size: 10px; /* Further reduced text size */
+      gap: 8px;
+    }
+    .cartItems-quantity {
+      width: 35px;
+      height: 30px;
+      font-size: 0.8rem;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+    .remove-icon {
+      width: 18px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .remove-icon:hover {
+      transform: scale(1.1);
+    }
+    .cartitems-totals, .cartitems-promocode {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .cartitems-totals h1 {
+      font-size: 1rem; /* Further reduced heading size */
+    }
+    .cartitems-totals p, .cartitems-totals h3, .cartitems-promocode p {
+      font-size: 0.75rem; /* Further reduced text size */
+    }
+    .cartitems-totals button {
+      font-size: 0.75rem; /* Further reduced button text */
+      padding: 0.6rem 1.3rem;
+      background-color: #66bb6a;
+      color: white;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .cartitems-totals button:hover {
+      background-color: #43a047;
+    }
+    .cartitems-promobox input, .cartitems-promobox button {
+      font-size: 0.75rem; /* Further reduced input text */
+      padding: 8px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .cartitems-promobox input:focus {
+      outline: none;
+      border-color: #66bb6a;
+      box-shadow: 0px 0px 4px rgba(102, 187, 106, 0.5);
+    }
+  }
+  
