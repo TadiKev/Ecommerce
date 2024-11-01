@@ -1,0 +1,134 @@
+/* Main container styling */
+.listproduct {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .listproduct h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Table header styling */
+  .listproducts-format-main {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 1fr 1.5fr 0.5fr;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .listproducts-format-main p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Product list styling */
+  .listproducts-allproducts {
+    margin-top: 1rem;
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 0;
+  }
+  
+  .listproduct-format-main.listproduct-format {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 1fr 1.5fr 0.5fr;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  .listproduct-format-main.listproduct-format:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Image styling */
+  .listproduct-product-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  /* Price styling */
+  .listproduct-format-main p {
+    color: #444;
+    font-size: 14px;
+  }
+  
+  /* Remove button styling */
+  .listproduct-remove-icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .listproduct-remove-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .listproducts-format-main, .listproduct-format {
+      grid-template-columns: 1.5fr 1.5fr 1fr 1fr 0.5fr;
+    }
+  
+    .listproduct-product-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .listproduct h1 {
+      font-size: 20px;
+    }
+  }
+  
+  /* Mobile view adjustments */
+  @media (max-width: 480px) {
+    /* Stack elements vertically */
+    .listproducts-format-main, .listproduct-format {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 0;
+      gap: 0.5rem;
+    }
+  
+    /* Adjust image size and hide some details */
+    .listproduct-product-icon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    /* Hide unnecessary fields */
+    .listproducts-format-main p:nth-child(3),
+    .listproducts-format-main p:nth-child(4),
+    .listproduct-format p:nth-child(3),
+    .listproduct-format p:nth-child(4) {
+      display: none;
+    }
+  
+    .listproduct h1 {
+      font-size: 18px;
+    }
+  }
+  
